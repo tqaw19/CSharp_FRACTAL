@@ -6,6 +6,7 @@ namespace CSharp_FRACTAL
     {
         static void Main(string[] args)
         {
+            /*
             string[] frutas = new string[3];
             frutas[0] = "Manzana";
             frutas[1] = "Banana";
@@ -31,7 +32,26 @@ namespace CSharp_FRACTAL
             foreach (var fruta in frutasDict)
             {
                 Console.WriteLine($"Fruta: {fruta.Key} - {fruta.Value}");
+            */
+            Funciones funciones = new Funciones();
+            funciones.GreaterNumber(4, 10);
+            funciones.GreaterNumber(10, 10);
+            funciones.CalculateSalary(5000);
+
+            Producto producto = new Producto("Papas", 5000);
+            Producto producto2 = new Producto("Cebolla", 8000);
+            List<Producto> products = new List<Producto>
+            {
+                new Producto("Papas", 5000),
+                new Producto("Cebolla", 5000)
+            };
+            foreach (var item in products)
+            {
+                item.MostrarInfo();
             }
+
+            producto.MostrarInfo();
+            producto2.MostrarInfo();
         }
     }
 }
