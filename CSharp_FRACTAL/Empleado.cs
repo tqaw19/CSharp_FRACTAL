@@ -7,10 +7,10 @@ public class Empleado
     public string Cargo { get; set; }
     public double Sueldo { get; private set; }
 
-    public Empleado(string nombre, string cargo, double sueldo)
+    public Empleado(string nombre, double sueldo)
     {
         Nombre = nombre;
-        Cargo = cargo;
+        //  Cargo = cargo;
         Sueldo = sueldo;
     }
 
@@ -18,5 +18,10 @@ public class Empleado
     {
         var bono = Sueldo * porcentaje;
         Console.WriteLine($"Su bono es de {bono}");
+        Console.WriteLine($"Sueldo Final {Sueldo + bono}");
+    }
+    public virtual void MostrarInfo()
+    {
+        Console.WriteLine($"Empleado: {Nombre}, Sueldo: {Sueldo}");
     }
 }
